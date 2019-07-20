@@ -12,6 +12,7 @@
 		247131F922E31B000017C5DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247131F722E31B000017C5DF /* Main.storyboard */; };
 		247131FB22E31B010017C5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247131FA22E31B010017C5DF /* Assets.xcassets */; };
 		247131FE22E31B010017C5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247131FC22E31B010017C5DF /* LaunchScreen.storyboard */; };
+		2471320622E32B620017C5DF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2471320522E32B620017C5DF /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		247131FA22E31B010017C5DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		247131FD22E31B010017C5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		247131FF22E31B010017C5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2471320522E32B620017C5DF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		247131E722E31AFF0017C5DF = {
 			isa = PBXGroup;
 			children = (
+				2471320522E32B620017C5DF /* README.md */,
 				247131F222E31B000017C5DF /* Github-Gists */,
 				247131F122E31B000017C5DF /* Products */,
 			);
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2471320622E32B620017C5DF /* README.md in Sources */,
 				247131F622E31B000017C5DF /* ViewController.swift in Sources */,
 				247131F422E31B000017C5DF /* AppDelegate.swift in Sources */,
 			);
