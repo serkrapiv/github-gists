@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GistsViewController.swift
 //  Github-Gists
 //
 //  Created by ApplePie on 20.07.19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GistsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
