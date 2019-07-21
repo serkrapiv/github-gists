@@ -33,28 +33,29 @@ class GistsViewController: UIViewController {
     // MARK: - Methods
     
     private func getPublicGists() {
-        NetworkService(url: "https://api.github.com/gists/public").connecting { (data, response, error) in
-            print("[...] Successful connection.")
-            print("[...] Response was received by application.")
-            guard let data = data, let _ = response else {
-                print("Response or data is nil")
-                return
-            }
-            
-            self.serializeJSON(from: data)
-            print("[...] Successful serialization.")
-        }
+        NetworkService(url: "https://api.github.com/gists/public")
+            .connecting(responseHandler)
     }
     
-    private func serializeJSON(from responseData: Data) {
-        print("[...] Try to serialize json...")
-        do {
-            let json = try JSONSerialization.jsonObject(with: responseData, options: [])
-            return try decodePublicGists(from: json as! Array<[String:Any]>)
+    //
+    // TODO: можно вынести в отдельный класс PublicGistsHandler
+    //
+    private func responseHandler(data: Data?, response: URLResponse?, error: Error?) {
+        print("[...] Successful connection.")
+        print("[...] Response was received by application.")
+        guard let data = data, let _ = response else {
+            print("Response or data is nil")
+            return
         }
-            
-        catch let error {
-            print(error.localizedDescription)
+        
+        serialize(json: data)
+        print("[...] Successful serialization.")
+        lastPublicGistTableView.reloadData()
+    }
+    
+    private func serialize(json: Data) {
+        Serializator.pull(data: json) { (json) in
+            try self.decodePublicGists(from: json as! [[String: Any]])
         }
     }
     

@@ -10,11 +10,14 @@ import UIKit
 
 extension GistsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return gists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Gist Cell", for: indexPath) as! GistTableViewCell
+        let gist = gists[indexPath.row]
+        cell.authorNameLabel.text = gist.owner.login
+        cell.gistNameLabel.text = gist.description
         return cell
     }
 }
