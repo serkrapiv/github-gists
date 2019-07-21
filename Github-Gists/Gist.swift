@@ -28,4 +28,5 @@ class Gist {
     var updateAt: String!
     var url: String!
     var user: String!
+    
 }
