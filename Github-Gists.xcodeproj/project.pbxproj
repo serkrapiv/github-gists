@@ -12,6 +12,9 @@
 		240D182722E3668700D1A5FD /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D182622E3668700D1A5FD /* Gist.swift */; };
 		240D182922E3699A00D1A5FD /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D182822E3699A00D1A5FD /* Owner.swift */; };
 		24568A3922E4857E0061EE97 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3822E4857E0061EE97 /* Network.swift */; };
+		24568A3C22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */; };
+		24568A3E22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */; };
+		24568A4022E4946C0061EE97 /* AvatarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */; };
 		247131F422E31B000017C5DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247131F322E31B000017C5DF /* AppDelegate.swift */; };
 		247131F622E31B000017C5DF /* GistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247131F522E31B000017C5DF /* GistsViewController.swift */; };
 		247131F922E31B000017C5DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247131F722E31B000017C5DF /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		240D182622E3668700D1A5FD /* Gist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		240D182822E3699A00D1A5FD /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		24568A3822E4857E0061EE97 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GistViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GistViewController+UICollectionDataSource.swift"; sourceTree = "<group>"; };
+		24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarCollectionViewCell.swift; sourceTree = "<group>"; };
 		247131F022E31B000017C5DF /* Github-Gists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-Gists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247131F322E31B000017C5DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		247131F522E31B000017C5DF /* GistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				240D181F22E3464600D1A5FD /* GistTableViewCell.swift */,
+				24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -79,6 +86,15 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		24568A3A22E492C80061EE97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */,
+				24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		247131E722E31AFF0017C5DF = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +119,7 @@
 				240D182422E35D0400D1A5FD /* Controllers */,
 				240D182322E35CF900D1A5FD /* Views */,
 				24568A3722E485570061EE97 /* Services */,
+				24568A3A22E492C80061EE97 /* Extensions */,
 				247131F722E31B000017C5DF /* Main.storyboard */,
 				247131FA22E31B010017C5DF /* Assets.xcassets */,
 				247131FC22E31B010017C5DF /* LaunchScreen.storyboard */,
@@ -183,12 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24568A3E22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift in Sources */,
 				240D182722E3668700D1A5FD /* Gist.swift in Sources */,
 				240D182922E3699A00D1A5FD /* Owner.swift in Sources */,
+				24568A4022E4946C0061EE97 /* AvatarCollectionViewCell.swift in Sources */,
 				247131F622E31B000017C5DF /* GistsViewController.swift in Sources */,
 				240D182022E3464600D1A5FD /* GistTableViewCell.swift in Sources */,
 				240D182222E3484F00D1A5FD /* DetailGistViewController.swift in Sources */,
 				24568A3922E4857E0061EE97 /* Network.swift in Sources */,
+				24568A3C22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift in Sources */,
 				247131F422E31B000017C5DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

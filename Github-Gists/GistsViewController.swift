@@ -10,6 +10,12 @@ import UIKit
 
 class GistsViewController: UIViewController {
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var topGistMakersCollectionView: UICollectionView!
+    @IBOutlet weak var lastPublicGistTableView: UITableView!
+    
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
