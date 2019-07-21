@@ -75,7 +75,7 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="FyU-jy-qnb"/>
                                 </connections>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9oL-ef-9qB">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9oL-ef-9qB">
                                 <rect key="frame" x="0.0" y="64" width="375" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -89,7 +89,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Avatar Cell" id="yrB-r8-CTQ" customClass="AvatarCollectionViewCell" customModule="Github_Gists" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.5" width="60" height="79"/>
+                                        <rect key="frame" x="0.0" y="1" width="60" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="79"/>

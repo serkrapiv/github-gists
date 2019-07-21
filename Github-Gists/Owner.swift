@@ -6,17 +6,27 @@
 //  Copyright © 2019 VictorVolnukhin. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class Owner {
-    let name: String
-    var avatarUrl: URL!
-    var avatarImage: UIImage!
     
-    init(name: String, avatarUrl: String) {
-        self.name = name
-        if let url = URL(string: avatarUrl) {
-            self.avatarUrl = url
-        }
-    }
+    var avatarURL: String!
+    var eventsURL: String!
+    var followersURL: String!
+    var followingURL: String!
+    var gistsURL: String!
+    var gravatarID: String!
+    var htmlURL: String!
+    var id: Int!
+    var login: String!
+    var nodeID: String!
+    var organizationsURL: String!
+    var receivedEventsURL: String!
+    var reposURL: String!
+    var siteAdmin: Bool!
+    var starredURL: String!
+    var subscriptionsURL: String!
+    var type: String!
+    var url: String!
+
 }
