@@ -10,7 +10,7 @@ import UIKit
 
 class GistTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var avatarImageView: AvatarImageView!
     @IBOutlet weak var gistNameLabel: UILabel!
     @IBOutlet weak var authorNameLabel: UILabel!
     

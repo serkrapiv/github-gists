@@ -18,6 +18,7 @@ extension GistsViewController: UITableViewDataSource {
         let gist = gists[indexPath.row]
         cell.authorNameLabel.text = gist.owner.login
         cell.gistNameLabel.text = gist.description
+        cell.avatarImageView.downloadImageIfNeeded(from: gist.owner.avatarURL)
         return cell
     }
 }

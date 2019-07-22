@@ -10,7 +10,7 @@ import UIKit
 
 class AvatarCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var avatarImageView: AvatarImageView!
     @IBOutlet weak var nameLabel: UILabel!
 
 }

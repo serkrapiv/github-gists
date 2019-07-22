@@ -11,7 +11,6 @@
 		240D182222E3484F00D1A5FD /* DetailGistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D182122E3484F00D1A5FD /* DetailGistViewController.swift */; };
 		240D182722E3668700D1A5FD /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D182622E3668700D1A5FD /* Gist.swift */; };
 		240D182922E3699A00D1A5FD /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D182822E3699A00D1A5FD /* Owner.swift */; };
-		2410AF7C22E4F7310021A731 /* Serializator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410AF7B22E4F7310021A731 /* Serializator.swift */; };
 		24568A3922E4857E0061EE97 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3822E4857E0061EE97 /* Network.swift */; };
 		24568A3C22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */; };
 		24568A3E22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */; };
@@ -23,6 +22,7 @@
 		247131FE22E31B010017C5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247131FC22E31B010017C5DF /* LaunchScreen.storyboard */; };
 		24E4D48922E49DDD00B73151 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4D48822E49DDD00B73151 /* File.swift */; };
 		A7799E5222E5CC3D008F4501 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7799E5122E5CC3D008F4501 /* Decoder.swift */; };
+		A7799E5422E5D54D008F4501 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7799E5322E5D54D008F4501 /* AvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,6 @@
 		240D182122E3484F00D1A5FD /* DetailGistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailGistViewController.swift; sourceTree = "<group>"; };
 		240D182622E3668700D1A5FD /* Gist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		240D182822E3699A00D1A5FD /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
-		2410AF7B22E4F7310021A731 /* Serializator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializator.swift; sourceTree = "<group>"; };
 		24568A3822E4857E0061EE97 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GistViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GistViewController+UICollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		247131FF22E31B010017C5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E4D48822E49DDD00B73151 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		A7799E5122E5CC3D008F4501 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		A7799E5322E5D54D008F4501 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,7 @@
 			children = (
 				240D181F22E3464600D1A5FD /* GistTableViewCell.swift */,
 				24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */,
+				A7799E5322E5D54D008F4501 /* AvatarImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				24568A3822E4857E0061EE97 /* Network.swift */,
-				2410AF7B22E4F7310021A731 /* Serializator.swift */,
 				A7799E5122E5CC3D008F4501 /* Decoder.swift */,
 			);
 			path = Services;
@@ -210,7 +210,6 @@
 			files = (
 				24568A3E22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift in Sources */,
 				240D182722E3668700D1A5FD /* Gist.swift in Sources */,
-				2410AF7C22E4F7310021A731 /* Serializator.swift in Sources */,
 				240D182922E3699A00D1A5FD /* Owner.swift in Sources */,
 				24568A4022E4946C0061EE97 /* AvatarCollectionViewCell.swift in Sources */,
 				247131F622E31B000017C5DF /* GistsViewController.swift in Sources */,
@@ -221,6 +220,7 @@
 				24E4D48922E49DDD00B73151 /* File.swift in Sources */,
 				247131F422E31B000017C5DF /* AppDelegate.swift in Sources */,
 				A7799E5222E5CC3D008F4501 /* Decoder.swift in Sources */,
+				A7799E5422E5D54D008F4501 /* AvatarImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
