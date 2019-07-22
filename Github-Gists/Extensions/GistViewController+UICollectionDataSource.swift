@@ -15,6 +15,16 @@ extension GistsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Avatar Cell", for: indexPath) as! AvatarCollectionViewCell
+        
+        guard !(gists.isEmpty) else {
+            cell.avatarImageView.image = UIImage()
+            cell.nameLabel.text = String()
+            return cell
+        }
+        
+        let gist = gists[indexPath.row]
+        cell.avatarImageView.downloadImageIfNeeded(from: gist.owner.avatarURL)
+        cell.nameLabel.text = gist.owner.login
         return cell
     }
 }

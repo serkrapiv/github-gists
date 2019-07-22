@@ -6,7 +6,7 @@
 //  Copyright © 2019 VictorVolnukhin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Owner: Codable {
     
@@ -30,6 +30,7 @@ class Owner: Codable {
     var subscriptionsURL: String!
     var type: String!
     var url: String!
+    var avatarImage: UIImage!
 
     
     // MARK: - Encodable

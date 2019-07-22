@@ -29,5 +29,7 @@ class GGDecoder {
         } catch let error {
             print(error.localizedDescription)
         }
+        
+        print("[...] Successful decoding.")
     }
 }

@@ -19,6 +19,7 @@ class GistsViewController: UIViewController {
     
     @IBOutlet weak var topGistMakersCollectionView: UICollectionView!
     @IBOutlet weak var lastPublicGistTableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     
     // MARK: - Lifecycle
@@ -50,15 +51,18 @@ class GistsViewController: UIViewController {
         
         GGDecoder.decode {
             self.gists = try JSONDecoder().decode(Array<Gist>.self, from: data)
-            self.updateTableView()
         }
-        print("[...] Successful decoding.")
+        updateTableView()
     }
     
     private func updateTableView() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
             self.lastPublicGistTableView.reloadData()
-        }
+            self.topGistMakersCollectionView.reloadData()
+            self.activityIndicatorView.stopAnimating()
+            self.lastPublicGistTableView.isHidden = false
+            self.topGistMakersCollectionView.isHidden = false
+        })
     }
     
 }

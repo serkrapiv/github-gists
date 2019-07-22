@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GistsViewController.collectionView(_:cellForItemAt:):GistViewController+UICollectionDataSource.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "gists">
+            </PersistentString>
+            <PersistentString
+               value = "gists[indexPath.row].owner.avatarImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
