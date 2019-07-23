@@ -37,6 +37,7 @@ class AvatarImageView: UIImageView {
         guard let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage else { return false }
         
         self.image = imageFromCache
+        print("Image load from cache")
         return true
     }
     
@@ -63,6 +64,7 @@ class AvatarImageView: UIImageView {
     }
     
     private func saveImageInCache(with urlString: String?, and data: Data) {
+        print("Image download from server")
         let imageToCache = UIImage(data: data)
         
         if self.imageURLString == urlString {
