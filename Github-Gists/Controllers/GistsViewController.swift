@@ -64,7 +64,7 @@ class GistsViewController: UIViewController {
     }
     
     private func updateTableView() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             self.lastPublicGistTableView.reloadData()
             self.topGistMakersCollectionView.reloadData()
             self.activityIndicatorView.stopAnimating()

@@ -206,19 +206,62 @@
                                                     <outlet property="delegate" destination="NnL-zG-ejc" id="mV8-Pv-PTp"/>
                                                 </connections>
                                             </textView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LYl-Wu-L3x">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LYl-Wu-L3x">
                                                 <rect key="frame" x="0.0" y="185" width="375" height="615"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="615" id="bWm-JQ-nN2"/>
+                                                </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Commit Cell" id="1Vb-2p-FpG">
-                                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Commit Cell" rowHeight="70" id="1Vb-2p-FpG" customClass="CommitTableViewCell" customModule="Github_Gists" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Vb-2p-FpG" id="h3m-5T-2H7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BY3-Zd-IQc">
+                                                                    <rect key="frame" x="25" y="24" width="31" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.055871238905378207" green="0.70988503886010368" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdl-9H-FNA">
+                                                                    <rect key="frame" x="86" y="24" width="50" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.81460492227979275" green="0.058967077388140388" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgi-cN-x36">
+                                                                    <rect key="frame" x="166" y="24" width="184" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="rdl-9H-FNA" firstAttribute="leading" secondItem="BY3-Zd-IQc" secondAttribute="trailing" constant="30" id="91f-EZ-6h8"/>
+                                                                <constraint firstItem="BY3-Zd-IQc" firstAttribute="leading" secondItem="h3m-5T-2H7" secondAttribute="leadingMargin" constant="10" id="B1D-bI-XQa"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="rdl-9H-FNA" secondAttribute="bottom" constant="14" id="CHQ-gQ-tAq"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="BY3-Zd-IQc" secondAttribute="bottom" constant="14" id="Gox-7T-7dK"/>
+                                                                <constraint firstItem="BY3-Zd-IQc" firstAttribute="top" secondItem="h3m-5T-2H7" secondAttribute="topMargin" constant="13" id="HaO-p8-Fsx"/>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="vgi-cN-x36" secondAttribute="trailing" constant="10" id="Vs0-ZZ-uFF"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="vgi-cN-x36" secondAttribute="bottom" constant="14" id="Yj2-TC-vUA"/>
+                                                                <constraint firstItem="vgi-cN-x36" firstAttribute="leading" secondItem="rdl-9H-FNA" secondAttribute="trailing" constant="30" id="b6Z-ZD-MIG"/>
+                                                                <constraint firstItem="rdl-9H-FNA" firstAttribute="top" secondItem="h3m-5T-2H7" secondAttribute="topMargin" constant="13" id="h8Y-R8-eTJ"/>
+                                                                <constraint firstItem="vgi-cN-x36" firstAttribute="top" secondItem="h3m-5T-2H7" secondAttribute="topMargin" constant="13" id="qgM-Tu-yry"/>
+                                                            </constraints>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="additionsLabel" destination="BY3-Zd-IQc" id="MHA-QO-TVa"/>
+                                                            <outlet property="dateLabel" destination="vgi-cN-x36" id="dO7-lu-Wu1"/>
+                                                            <outlet property="deletionsLabel" destination="rdl-9H-FNA" id="YNV-rj-qt8"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="NnL-zG-ejc" id="0BR-8a-6ae"/>
+                                                </connections>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gist Name Text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzC-YP-rlM">
                                                 <rect key="frame" x="117" y="66" width="242.5" height="20.5"/>
@@ -271,6 +314,7 @@
                     <connections>
                         <outlet property="authorNameLabel" destination="cJR-dW-ObY" id="Rf2-Tm-B26"/>
                         <outlet property="avatarImageView" destination="L4O-FT-bts" id="I2f-XC-oac"/>
+                        <outlet property="commitsTableView" destination="LYl-Wu-L3x" id="kD5-Zc-1Dc"/>
                         <outlet property="contentGistTextView" destination="lbu-XF-DCe" id="mRi-At-rJz"/>
                         <outlet property="gistNameLabel" destination="kzC-YP-rlM" id="BJM-v3-Sd6"/>
                         <outlet property="heightConstraintOfContentGistTextView" destination="yDI-Oj-WVV" id="X56-FE-kFX"/>

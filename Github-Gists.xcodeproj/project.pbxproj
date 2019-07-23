@@ -21,10 +21,13 @@
 		247131FB22E31B010017C5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247131FA22E31B010017C5DF /* Assets.xcassets */; };
 		247131FE22E31B010017C5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247131FC22E31B010017C5DF /* LaunchScreen.storyboard */; };
 		24E4D48922E49DDD00B73151 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4D48822E49DDD00B73151 /* File.swift */; };
+		A729AD8722E73B1D00C1827D /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8622E73B1D00C1827D /* Commit.swift */; };
+		A729AD8922E73BFD00C1827D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8822E73BFD00C1827D /* Status.swift */; };
+		A729AD8B22E7411800C1827D /* CommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */; };
+		A729AD8D22E741D800C1827D /* DetailGistViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8C22E741D800C1827D /* DetailGistViewController+UITableViewDataSource.swift */; };
 		A7799E5222E5CC3D008F4501 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7799E5122E5CC3D008F4501 /* Decoder.swift */; };
 		A7799E5422E5D54D008F4501 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7799E5322E5D54D008F4501 /* AvatarImageView.swift */; };
 		A779DE6822E7328C0036CE6F /* ContentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779DE6722E7328C0036CE6F /* ContentTextView.swift */; };
-		A779DE6A22E735F60036CE6F /* DetailGistViewController+UITextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779DE6922E735F60036CE6F /* DetailGistViewController+UITextViewDelegate.swift */; };
 		A7820EF222E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7820EF122E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift */; };
 		A7820EF522E6FD100068C6E9 /* DownloadHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7820EF422E6FD100068C6E9 /* DownloadHandler.swift */; };
 		A7820EF722E7000F0068C6E9 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7820EF622E7000F0068C6E9 /* AppConstant.swift */; };
@@ -48,10 +51,13 @@
 		247131FD22E31B010017C5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		247131FF22E31B010017C5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E4D48822E49DDD00B73151 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		A729AD8622E73B1D00C1827D /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		A729AD8822E73BFD00C1827D /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewCell.swift; sourceTree = "<group>"; };
+		A729AD8C22E741D800C1827D /* DetailGistViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailGistViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		A7799E5122E5CC3D008F4501 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		A7799E5322E5D54D008F4501 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		A779DE6722E7328C0036CE6F /* ContentTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTextView.swift; sourceTree = "<group>"; };
-		A779DE6922E735F60036CE6F /* DetailGistViewController+UITextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DetailGistViewController+UITextViewDelegate.swift"; sourceTree = "<group>"; };
 		A7820EF122E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GistsViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		A7820EF422E6FD100068C6E9 /* DownloadHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHandler.swift; sourceTree = "<group>"; };
 		A7820EF622E7000F0068C6E9 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 				24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */,
 				A7799E5322E5D54D008F4501 /* AvatarImageView.swift */,
 				A779DE6722E7328C0036CE6F /* ContentTextView.swift */,
+				A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +102,8 @@
 				240D182622E3668700D1A5FD /* Gist.swift */,
 				240D182822E3699A00D1A5FD /* Owner.swift */,
 				24E4D48822E49DDD00B73151 /* File.swift */,
+				A729AD8622E73B1D00C1827D /* Commit.swift */,
+				A729AD8822E73BFD00C1827D /* Status.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,7 +124,7 @@
 				24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */,
 				24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */,
 				A7820EF122E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift */,
-				A779DE6922E735F60036CE6F /* DetailGistViewController+UITextViewDelegate.swift */,
+				A729AD8C22E741D800C1827D /* DetailGistViewController+UITableViewDataSource.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,7 +245,6 @@
 			files = (
 				A7820EF222E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift in Sources */,
 				A7820EF522E6FD100068C6E9 /* DownloadHandler.swift in Sources */,
-				A779DE6A22E735F60036CE6F /* DetailGistViewController+UITextViewDelegate.swift in Sources */,
 				24568A3E22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift in Sources */,
 				240D182722E3668700D1A5FD /* Gist.swift in Sources */,
 				A7820EF922E708F70068C6E9 /* Serializator.swift in Sources */,
@@ -246,6 +254,10 @@
 				247131F622E31B000017C5DF /* GistsViewController.swift in Sources */,
 				A7820EF722E7000F0068C6E9 /* AppConstant.swift in Sources */,
 				240D182022E3464600D1A5FD /* GistTableViewCell.swift in Sources */,
+				A729AD8D22E741D800C1827D /* DetailGistViewController+UITableViewDataSource.swift in Sources */,
+				A729AD8922E73BFD00C1827D /* Status.swift in Sources */,
+				A729AD8722E73B1D00C1827D /* Commit.swift in Sources */,
+				A729AD8B22E7411800C1827D /* CommitTableViewCell.swift in Sources */,
 				240D182222E3484F00D1A5FD /* DetailGistViewController.swift in Sources */,
 				24568A3922E4857E0061EE97 /* Network.swift in Sources */,
 				24568A3C22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift in Sources */,
