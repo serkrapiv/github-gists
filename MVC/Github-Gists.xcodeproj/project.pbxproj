@@ -12,8 +12,8 @@
 		240D182722E3668700D1A5FD /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D182622E3668700D1A5FD /* Gist.swift */; };
 		240D182922E3699A00D1A5FD /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D182822E3699A00D1A5FD /* Owner.swift */; };
 		24568A3922E4857E0061EE97 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3822E4857E0061EE97 /* Network.swift */; };
-		24568A3C22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */; };
-		24568A3E22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */; };
+		24568A3C22E4931B0061EE97 /* GistsViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3B22E4931B0061EE97 /* GistsViewController+UITableViewDataSource.swift */; };
+		24568A3E22E493E00061EE97 /* GistsViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3D22E493E00061EE97 /* GistsViewController+UICollectionViewDataSource.swift */; };
 		24568A4022E4946C0061EE97 /* AvatarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */; };
 		247131F422E31B000017C5DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247131F322E31B000017C5DF /* AppDelegate.swift */; };
 		247131F622E31B000017C5DF /* GistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247131F522E31B000017C5DF /* GistsViewController.swift */; };
@@ -21,6 +21,7 @@
 		247131FB22E31B010017C5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247131FA22E31B010017C5DF /* Assets.xcassets */; };
 		247131FE22E31B010017C5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247131FC22E31B010017C5DF /* LaunchScreen.storyboard */; };
 		24E4D48922E49DDD00B73151 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4D48822E49DDD00B73151 /* File.swift */; };
+		A712545722E8B6C500339618 /* GistsViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712545622E8B6C500339618 /* GistsViewController+UICollectionViewDelegate.swift */; };
 		A729AD8722E73B1D00C1827D /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8622E73B1D00C1827D /* Commit.swift */; };
 		A729AD8922E73BFD00C1827D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8822E73BFD00C1827D /* Status.swift */; };
 		A729AD8B22E7411800C1827D /* CommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */; };
@@ -39,8 +40,8 @@
 		240D182622E3668700D1A5FD /* Gist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		240D182822E3699A00D1A5FD /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		24568A3822E4857E0061EE97 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GistViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
-		24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GistViewController+UICollectionDataSource.swift"; sourceTree = "<group>"; };
+		24568A3B22E4931B0061EE97 /* GistsViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GistsViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		24568A3D22E493E00061EE97 /* GistsViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GistsViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarCollectionViewCell.swift; sourceTree = "<group>"; };
 		247131F022E31B000017C5DF /* Github-Gists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-Gists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		247131F322E31B000017C5DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		247131FD22E31B010017C5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		247131FF22E31B010017C5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E4D48822E49DDD00B73151 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		A712545622E8B6C500339618 /* GistsViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GistsViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A729AD8622E73B1D00C1827D /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		A729AD8822E73BFD00C1827D /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,9 +121,10 @@
 		24568A3A22E492C80061EE97 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				24568A3B22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift */,
-				24568A3D22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift */,
+				24568A3B22E4931B0061EE97 /* GistsViewController+UITableViewDataSource.swift */,
 				A7820EF122E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift */,
+				24568A3D22E493E00061EE97 /* GistsViewController+UICollectionViewDataSource.swift */,
+				A712545622E8B6C500339618 /* GistsViewController+UICollectionViewDelegate.swift */,
 				A729AD8C22E741D800C1827D /* DetailGistViewController+UITableViewDataSource.swift */,
 			);
 			path = Extensions;
@@ -233,8 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7820EF222E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift in Sources */,
-				24568A3E22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift in Sources */,
+				24568A3E22E493E00061EE97 /* GistsViewController+UICollectionViewDataSource.swift in Sources */,
 				240D182722E3668700D1A5FD /* Gist.swift in Sources */,
+				A712545722E8B6C500339618 /* GistsViewController+UICollectionViewDelegate.swift in Sources */,
 				A7820EF922E708F70068C6E9 /* Serializator.swift in Sources */,
 				A779DE6822E7328C0036CE6F /* ContentTextView.swift in Sources */,
 				240D182922E3699A00D1A5FD /* Owner.swift in Sources */,
@@ -248,7 +252,7 @@
 				A729AD8B22E7411800C1827D /* CommitTableViewCell.swift in Sources */,
 				240D182222E3484F00D1A5FD /* DetailGistViewController.swift in Sources */,
 				24568A3922E4857E0061EE97 /* Network.swift in Sources */,
-				24568A3C22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift in Sources */,
+				24568A3C22E4931B0061EE97 /* GistsViewController+UITableViewDataSource.swift in Sources */,
 				24E4D48922E49DDD00B73151 /* File.swift in Sources */,
 				247131F422E31B000017C5DF /* AppDelegate.swift in Sources */,
 				A7799E5222E5CC3D008F4501 /* Decoder.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  GistViewController+UICollectionDataSource.swift
+//  GistsViewController+UICollectionViewDataSource.swift
 //  Github-Gists
 //
 //  Created by ApplePie on 21.07.19.

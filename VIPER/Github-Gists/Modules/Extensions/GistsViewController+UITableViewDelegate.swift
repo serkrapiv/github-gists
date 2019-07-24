@@ -10,7 +10,7 @@ import UIKit
 
 extension GistsViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        chosenGist = gists[indexPath.row]
+        chosenGist = sortedGists.isEmpty ? gists[indexPath.row] : sortedGists[indexPath.row]
         performSegue(withIdentifier: AppConstant.segues.toDetaiedView, sender: self)
     }
 }

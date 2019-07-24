@@ -13,8 +13,9 @@ class GistsViewController: UIViewController {
     // MARK: - Fields
     
     lazy var gists = [Gist]()
+    lazy var topGistMakers = [Owner?]()
+    lazy var sortedGists = [Gist]()
     var chosenGist: Gist!
-    var topGistMakers = [Owner?]()
     
     
     // MARK: - Outlets
