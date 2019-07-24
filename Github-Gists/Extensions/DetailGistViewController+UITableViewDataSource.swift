@@ -16,9 +16,9 @@ extension DetailGistViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Commit Cell", for: indexPath) as! CommitTableViewCell
         let commit = commits[indexPath.row]
-        cell.additionsLabel.text = "+" + String(commit.status.additions)
-        cell.deletionsLabel.text = "-" + String(commit.status.deletions)
-        cell.dateLabel.text = commit.committedAt
+        cell.additionsLabel.text = "+" + String(commit.status.additions ?? Int())
+        cell.deletionsLabel.text = "-" + String(commit.status.deletions ?? Int())
+        cell.dateLabel.text = commit.committedAt ?? String()
         return cell
     }
 }

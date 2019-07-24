@@ -365,7 +365,7 @@
                                                     <outlet property="delegate" destination="NnL-zG-ejc" id="sTp-WN-0mv"/>
                                                 </connections>
                                             </textView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LTy-PC-5f9">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LTy-PC-5f9">
                                                 <rect key="frame" x="0.0" y="200" width="375" height="467"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -475,6 +475,7 @@
                         <outlet property="commitsTableView" destination="LTy-PC-5f9" id="x2o-8J-B1N"/>
                         <outlet property="contentGistTextView" destination="y2z-k4-pBA" id="EyX-ef-wGH"/>
                         <outlet property="gistNameLabel" destination="8gR-5B-qrC" id="5AA-Uh-nbU"/>
+                        <outlet property="heightConstraintOfCommitTableView" destination="9uX-AP-nsO" id="jpP-z9-8Oy"/>
                         <outlet property="heightConstraintOfContentGistTextView" destination="o35-OY-ynZ" id="Hte-0v-5lc"/>
                     </connections>
                 </viewController>

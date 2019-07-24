@@ -24,6 +24,7 @@ class DetailGistViewController: UIViewController {
     @IBOutlet weak var contentGistTextView: ContentTextView!
     @IBOutlet weak var heightConstraintOfContentGistTextView: NSLayoutConstraint!
     @IBOutlet weak var commitsTableView: UITableView!
+    @IBOutlet weak var heightConstraintOfCommitTableView: NSLayoutConstraint!
     
     
     // MARK: - Lifecycle
@@ -84,6 +85,10 @@ class DetailGistViewController: UIViewController {
     
     private func updateCommitsTableView() {
         DispatchQueue.main.async {
+            self.heightConstraintOfCommitTableView.constant = CGFloat(self.commits.count) * self.commitsTableView.rowHeight
+            print("Table Height: \(self.heightConstraintOfCommitTableView.constant)")
+            print("Row Height: \(self.commitsTableView.rowHeight)")
+            print("Commits Count: \(self.commits.count)")
             self.commitsTableView.reloadData()
         }
     }
