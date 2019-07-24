@@ -29,7 +29,6 @@
 		A7799E5422E5D54D008F4501 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7799E5322E5D54D008F4501 /* AvatarImageView.swift */; };
 		A779DE6822E7328C0036CE6F /* ContentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779DE6722E7328C0036CE6F /* ContentTextView.swift */; };
 		A7820EF222E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7820EF122E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift */; };
-		A7820EF522E6FD100068C6E9 /* DownloadHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7820EF422E6FD100068C6E9 /* DownloadHandler.swift */; };
 		A7820EF722E7000F0068C6E9 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7820EF622E7000F0068C6E9 /* AppConstant.swift */; };
 		A7820EF922E708F70068C6E9 /* Serializator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7820EF822E708F70068C6E9 /* Serializator.swift */; };
 /* End PBXBuildFile section */
@@ -59,7 +58,6 @@
 		A7799E5322E5D54D008F4501 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		A779DE6722E7328C0036CE6F /* ContentTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTextView.swift; sourceTree = "<group>"; };
 		A7820EF122E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GistsViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
-		A7820EF422E6FD100068C6E9 /* DownloadHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHandler.swift; sourceTree = "<group>"; };
 		A7820EF622E7000F0068C6E9 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		A7820EF822E708F70068C6E9 /* Serializator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,21 +153,12 @@
 				240D182322E35CF900D1A5FD /* Views */,
 				24568A3722E485570061EE97 /* Services */,
 				24568A3A22E492C80061EE97 /* Extensions */,
-				A7820EF322E6FCEC0068C6E9 /* Handlers */,
 				247131F722E31B000017C5DF /* Main.storyboard */,
 				247131FA22E31B010017C5DF /* Assets.xcassets */,
 				247131FC22E31B010017C5DF /* LaunchScreen.storyboard */,
 				247131FF22E31B010017C5DF /* Info.plist */,
 			);
 			path = "Github-Gists";
-			sourceTree = "<group>";
-		};
-		A7820EF322E6FCEC0068C6E9 /* Handlers */ = {
-			isa = PBXGroup;
-			children = (
-				A7820EF422E6FD100068C6E9 /* DownloadHandler.swift */,
-			);
-			path = Handlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +233,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7820EF222E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift in Sources */,
-				A7820EF522E6FD100068C6E9 /* DownloadHandler.swift in Sources */,
 				24568A3E22E493E00061EE97 /* GistViewController+UICollectionDataSource.swift in Sources */,
 				240D182722E3668700D1A5FD /* Gist.swift in Sources */,
 				A7820EF922E708F70068C6E9 /* Serializator.swift in Sources */,

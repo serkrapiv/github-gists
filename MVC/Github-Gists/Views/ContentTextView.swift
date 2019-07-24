@@ -32,6 +32,7 @@ class ContentTextView: UITextView {
         guard let data = data, let _ = response else { return }
         
         if let newcontent = String(data: data, encoding: .utf8) {
+            
             DispatchQueue.main.async {
                 self.text = self.text + "\n" + newcontent
                 self.sizeToFit()
