@@ -86,9 +86,6 @@ class DetailGistViewController: UIViewController {
     private func updateCommitsTableView() {
         DispatchQueue.main.async {
             self.heightConstraintOfCommitTableView.constant = CGFloat(self.commits.count) * self.commitsTableView.rowHeight
-            print("Table Height: \(self.heightConstraintOfCommitTableView.constant)")
-            print("Row Height: \(self.commitsTableView.rowHeight)")
-            print("Commits Count: \(self.commits.count)")
             self.commitsTableView.reloadData()
         }
     }

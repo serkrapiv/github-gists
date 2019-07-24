@@ -14,6 +14,7 @@ class GistsViewController: UIViewController {
     
     lazy var gists = [Gist]()
     var chosenGist: Gist!
+    var topGistMakers = [Owner?]()
     
     
     // MARK: - Outlets
@@ -66,11 +67,27 @@ class GistsViewController: UIViewController {
     private func updateTableView() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             self.lastPublicGistTableView.reloadData()
-            self.topGistMakersCollectionView.reloadData()
             self.activityIndicatorView.stopAnimating()
             self.lastPublicGistTableView.isHidden = false
-            self.topGistMakersCollectionView.isHidden = false
+            self.createCollectionView()
         })
+    }
+    
+    private func createCollectionView() {
+        
+        let allGistMakers = Dictionary(grouping: gists) { $0.owner }
+                            .mapValues { (value: [Gist]) in return value.count }
+                            .sorted(by: {$0.1 > $1.1})
+                            .map { $0.key }
+        
+        topGistMakers = Array(allGistMakers.prefix(10))
+        
+        updateCollectionView()
+    }
+    
+    private func updateCollectionView() {
+        topGistMakersCollectionView.reloadData()
+        topGistMakersCollectionView.isHidden = false
     }
     
     

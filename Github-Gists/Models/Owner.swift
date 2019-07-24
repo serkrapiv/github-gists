@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Owner: Codable {
+class Owner: Codable, Hashable {
     
     // MARK: - Fields
     
@@ -80,6 +80,17 @@ class Owner: Codable {
         subscriptionsURL = try container.decode(String?.self, forKey: .subscriptionsURL)
         type = try container.decode(String?.self, forKey: .type)
         url = try container.decode(String?.self, forKey: .url)
+    }
+    
+    
+    // MARK: - Hashable
+    
+    static func == (lhs: Owner, rhs: Owner) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
     
