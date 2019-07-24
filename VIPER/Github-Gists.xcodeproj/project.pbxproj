@@ -21,6 +21,8 @@
 		247131FB22E31B010017C5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247131FA22E31B010017C5DF /* Assets.xcassets */; };
 		247131FE22E31B010017C5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247131FC22E31B010017C5DF /* LaunchScreen.storyboard */; };
 		24E4D48922E49DDD00B73151 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4D48822E49DDD00B73151 /* File.swift */; };
+		A712545122E8B31500339618 /* GistsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712545022E8B31500339618 /* GistsViewProtocol.swift */; };
+		A712545522E8B34B00339618 /* DetailGistViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712545422E8B34B00339618 /* DetailGistViewProtocol.swift */; };
 		A729AD8722E73B1D00C1827D /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8622E73B1D00C1827D /* Commit.swift */; };
 		A729AD8922E73BFD00C1827D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8822E73BFD00C1827D /* Status.swift */; };
 		A729AD8B22E7411800C1827D /* CommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */; };
@@ -50,6 +52,8 @@
 		247131FD22E31B010017C5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		247131FF22E31B010017C5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E4D48822E49DDD00B73151 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		A712545022E8B31500339618 /* GistsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsViewProtocol.swift; sourceTree = "<group>"; };
+		A712545422E8B34B00339618 /* DetailGistViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGistViewProtocol.swift; sourceTree = "<group>"; };
 		A729AD8622E73B1D00C1827D /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		A729AD8822E73BFD00C1827D /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewCell.swift; sourceTree = "<group>"; };
@@ -76,25 +80,13 @@
 		240D182322E35CF900D1A5FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				240D181F22E3464600D1A5FD /* GistTableViewCell.swift */,
-				24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */,
-				A7799E5322E5D54D008F4501 /* AvatarImageView.swift */,
-				A779DE6722E7328C0036CE6F /* ContentTextView.swift */,
-				A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */,
+				A712544C22E8B27700339618 /* Cells */,
+				A712544D22E8B28300339618 /* Controls */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		240D182422E35D0400D1A5FD /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				247131F522E31B000017C5DF /* GistsViewController.swift */,
-				240D182122E3484F00D1A5FD /* DetailGistViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		240D182522E3665900D1A5FD /* Models */ = {
+		240D182522E3665900D1A5FD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				240D182622E3668700D1A5FD /* Gist.swift */,
@@ -103,7 +95,7 @@
 				A729AD8622E73B1D00C1827D /* Commit.swift */,
 				A729AD8822E73BFD00C1827D /* Status.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		24568A3722E485570061EE97 /* Services */ = {
@@ -148,17 +140,95 @@
 			children = (
 				247131F322E31B000017C5DF /* AppDelegate.swift */,
 				A7820EF622E7000F0068C6E9 /* AppConstant.swift */,
-				240D182522E3665900D1A5FD /* Models */,
-				240D182422E35D0400D1A5FD /* Controllers */,
+				A712544922E8B1C000339618 /* Modules */,
+				240D182522E3665900D1A5FD /* Entities */,
 				240D182322E35CF900D1A5FD /* Views */,
 				24568A3722E485570061EE97 /* Services */,
-				24568A3A22E492C80061EE97 /* Extensions */,
 				247131F722E31B000017C5DF /* Main.storyboard */,
 				247131FA22E31B010017C5DF /* Assets.xcassets */,
 				247131FC22E31B010017C5DF /* LaunchScreen.storyboard */,
 				247131FF22E31B010017C5DF /* Info.plist */,
 			);
 			path = "Github-Gists";
+			sourceTree = "<group>";
+		};
+		A712544922E8B1C000339618 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A712544A22E8B1D200339618 /* Gists */,
+				A712544B22E8B1E200339618 /* DetailGist */,
+				24568A3A22E492C80061EE97 /* Extensions */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A712544A22E8B1D200339618 /* Gists */ = {
+			isa = PBXGroup;
+			children = (
+				A712544F22E8B2B900339618 /* Realization */,
+				A712544E22E8B2B100339618 /* Protocols */,
+			);
+			path = Gists;
+			sourceTree = "<group>";
+		};
+		A712544B22E8B1E200339618 /* DetailGist */ = {
+			isa = PBXGroup;
+			children = (
+				A712545322E8B33200339618 /* Realization */,
+				A712545222E8B32400339618 /* Protocols */,
+			);
+			path = DetailGist;
+			sourceTree = "<group>";
+		};
+		A712544C22E8B27700339618 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				240D181F22E3464600D1A5FD /* GistTableViewCell.swift */,
+				24568A3F22E4946C0061EE97 /* AvatarCollectionViewCell.swift */,
+				A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A712544D22E8B28300339618 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				A7799E5322E5D54D008F4501 /* AvatarImageView.swift */,
+				A779DE6722E7328C0036CE6F /* ContentTextView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		A712544E22E8B2B100339618 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A712545022E8B31500339618 /* GistsViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A712544F22E8B2B900339618 /* Realization */ = {
+			isa = PBXGroup;
+			children = (
+				247131F522E31B000017C5DF /* GistsViewController.swift */,
+			);
+			path = Realization;
+			sourceTree = "<group>";
+		};
+		A712545222E8B32400339618 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A712545422E8B34B00339618 /* DetailGistViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A712545322E8B33200339618 /* Realization */ = {
+			isa = PBXGroup;
+			children = (
+				240D182122E3484F00D1A5FD /* DetailGistViewController.swift */,
+			);
+			path = Realization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +308,7 @@
 				A7820EF922E708F70068C6E9 /* Serializator.swift in Sources */,
 				A779DE6822E7328C0036CE6F /* ContentTextView.swift in Sources */,
 				240D182922E3699A00D1A5FD /* Owner.swift in Sources */,
+				A712545522E8B34B00339618 /* DetailGistViewProtocol.swift in Sources */,
 				24568A4022E4946C0061EE97 /* AvatarCollectionViewCell.swift in Sources */,
 				247131F622E31B000017C5DF /* GistsViewController.swift in Sources */,
 				A7820EF722E7000F0068C6E9 /* AppConstant.swift in Sources */,
@@ -249,6 +320,7 @@
 				240D182222E3484F00D1A5FD /* DetailGistViewController.swift in Sources */,
 				24568A3922E4857E0061EE97 /* Network.swift in Sources */,
 				24568A3C22E4931B0061EE97 /* GistViewController+UITableViewDataSource.swift in Sources */,
+				A712545122E8B31500339618 /* GistsViewProtocol.swift in Sources */,
 				24E4D48922E49DDD00B73151 /* File.swift in Sources */,
 				247131F422E31B000017C5DF /* AppDelegate.swift in Sources */,
 				A7799E5222E5CC3D008F4501 /* Decoder.swift in Sources */,
