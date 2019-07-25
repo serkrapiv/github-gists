@@ -15,7 +15,6 @@ class GistsInteractor: GistsInteractorProtocol {
     lazy var gists = [Gist]()
     lazy var topGistMakers = [Owner?]()
     lazy var sortedGists = [Gist]()
-    //var chosenGist: Gist!
     
     weak var presenter: GistsPresenterProtocol!
     let networkService: NetworkServiceProtocol
@@ -27,7 +26,7 @@ class GistsInteractor: GistsInteractorProtocol {
     
     init(presenter: GistsPresenterProtocol) {
         self.presenter = presenter
-        self.networkService = NetworkService(url: AppConstant.api.gists)
+        self.networkService = NetworkService(urlString: AppConstant.api.gists)
         self.serializationService = Serializator()
         self.decodingService = GGDecoder()
     }

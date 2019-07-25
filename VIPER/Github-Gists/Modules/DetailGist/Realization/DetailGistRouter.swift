@@ -10,4 +10,10 @@ import Foundation
 
 class DetailGistRouter: DetailGistRouterProtocol {
     
+    var viewController: DetailGistViewController!
+    
+    init(viewController: DetailGistViewController) {
+        self.viewController = viewController
+    }
+    
 }

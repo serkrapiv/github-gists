@@ -10,6 +10,10 @@ import UIKit
 
 class ContentTextView: UITextView {
     
+    // MARK: = Fields
+    
+    var networkService: NetworkServiceProtocol!
+    
     func addContent(from gist: Gist) {
         text = String()
         
@@ -20,7 +24,8 @@ class ContentTextView: UITextView {
     }
     
     private func downloadContent(from urlString: String) {
-        NetworkService(url: urlString).connecting(responseContentHandler)
+        networkService = NetworkService(urlString: urlString)
+        networkService.connecting(responseContentHandler)
     }
     
     private func responseContentHandler(data: Data?, response: URLResponse?, error: Error?) {

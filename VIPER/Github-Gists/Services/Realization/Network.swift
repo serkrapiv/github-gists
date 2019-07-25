@@ -12,7 +12,7 @@ class NetworkService: NetworkServiceProtocol {
     
     // MARK: - Fields
     
-    private var url: String
+    var urlString: String
     
     
     // MARK: - Typealias
@@ -22,16 +22,20 @@ class NetworkService: NetworkServiceProtocol {
     
     // MARK: - Initializers
     
-    init(url: String) {
-        print("[...] Try to connect by URL (\(url))...")
-        self.url = url
+    init() {
+        urlString = String()
+    }
+    
+    init(urlString: String) {
+        print("[...] Try to connect by URL (\(urlString))...")
+        self.urlString = urlString
     }
     
     
     // MARK: - Functions
     
     func connecting(_ handler: @escaping ResponseHandler) {
-        guard let url = URL(string: self.url) else {
+        guard let url = URL(string: urlString) else {
             print("Could not make the correct URL.")
             return
         }

@@ -10,6 +10,12 @@ import Foundation
 
 class DetailGistConfigurator: DetailGistConfiguratorProtocol {
     func configure(with viewController: DetailGistViewController) {
+        let presenter = DetailGistPresenter(view: viewController)
+        let interactor = DetailGistInteractor(presenter: presenter)
+        let router = DetailGistRouter(viewController: viewController)
         
+        viewController.presenter = presenter
+        presenter.interactor = interactor
+        presenter.router = router
     }
 }

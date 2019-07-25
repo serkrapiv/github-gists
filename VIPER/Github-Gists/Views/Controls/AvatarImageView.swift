@@ -15,6 +15,7 @@ class AvatarImageView: UIImageView {
     // MARK: - Fields
     
     var imageURLString: String?
+    var networkService: NetworkServiceProtocol!
     
     
     // MARK: - Methods
@@ -43,7 +44,8 @@ class AvatarImageView: UIImageView {
     
     /// Download image from server
     private func downloadImage(from urlString: String) {
-        NetworkService(url: urlString).connecting(responseImageHandler)
+        networkService = NetworkService(urlString: urlString)
+        networkService.connecting(responseImageHandler)
     }
     
     

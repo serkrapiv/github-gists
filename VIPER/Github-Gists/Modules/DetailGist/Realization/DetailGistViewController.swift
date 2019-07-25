@@ -8,17 +8,15 @@
 
 import UIKit
 
-class DetailGistViewController: UIViewController {
+class DetailGistViewController: UIViewController, DetailGistViewProtocol {
     
     // MARK: - Fields
     
     var gist: Gist!
-    lazy var commits = [Commit]()
+    var presenter: DetailGistPresenterProtocol!
+    var configurator: DetailGistConfiguratorProtocol = DetailGistConfigurator()
     
-    let serializationService: SerializatorProtocol = Serializator()
-    let decodingService: DecoderProtocol = GGDecoder()
-    
-    
+
     // MARK: - Outlets
 
     @IBOutlet weak var avatarImageView: AvatarImageView!
@@ -34,9 +32,12 @@ class DetailGistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurator.configure(with: self)
+        presenter.downloadCommits(for: gist)
+        
         setupPrimaryDataForControls()
         downloadContentOfGist()
-        downloadCommitsForGist()
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -45,7 +46,15 @@ class DetailGistViewController: UIViewController {
     }
     
     
-    // MARK: - Methods
+    // MARK: - DetailGistViewProtocol methods
+    
+    func resizeCommitTable(for commitsCount: Int) {
+        heightConstraintOfCommitTableView.constant = CGFloat(commitsCount) * commitsTableView.rowHeight
+        commitsTableView.reloadData()
+    }
+    
+    // MARK: - Private methods
+    
     
     private func setupPrimaryDataForControls() {
         avatarImageView.downloadImageIfNeeded(from: gist.owner.avatarURL)
@@ -64,32 +73,4 @@ class DetailGistViewController: UIViewController {
         contentGistTextView.addContent(from: gist)
     }
     
-    private func downloadCommitsForGist() {
-        NetworkService(url: gist.commitsURL).connecting(responseCommitHandler)
-    }
-    
-    private func responseCommitHandler(data: Data?, response: URLResponse?, error: Error?) {
-        if let error = error {
-            print(error.localizedDescription)
-            return
-        }
-        
-        guard let data = data, let _ = response else { return }
-        
-        serializationService.pull(data: data) { (json) in
-            print(json)
-        }
-        
-        decodingService.decode {
-            self.commits = try JSONDecoder().decode(Array<Commit>.self, from: data)
-        }
-        updateCommitsTableView()
-    }
-    
-    private func updateCommitsTableView() {
-        DispatchQueue.main.async {
-            self.heightConstraintOfCommitTableView.constant = CGFloat(self.commits.count) * self.commitsTableView.rowHeight
-            self.commitsTableView.reloadData()
-        }
-    }
 }

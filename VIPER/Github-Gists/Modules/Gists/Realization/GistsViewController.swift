@@ -10,6 +10,8 @@ import UIKit
 
 class GistsViewController: UIViewController, GistsViewProtocol {
     
+    // MARK: - Fields
+    
     var presenter: GistsPresenterProtocol!
     var configurator: GistsConfiguratorProtocol = GistsConfigurator()
     

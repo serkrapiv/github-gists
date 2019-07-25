@@ -10,4 +10,12 @@ import Foundation
 
 protocol DetailGistPresenterProtocol: class {
     
+    var router: DetailGistRouterProtocol! { get set }
+    
+    var numberOfRowsInSection: Int { get }
+    
+    func downloadCommits(for gist: Gist)
+    func getNeededCommit(by index: Int) -> Commit
+    func enableControls()
+    
 }

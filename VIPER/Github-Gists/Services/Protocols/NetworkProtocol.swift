@@ -9,5 +9,7 @@
 import Foundation
 
 protocol NetworkServiceProtocol: class {
+    var urlString: String { get set }
+    
     func connecting(_ handler: @escaping (Data?, URLResponse?, Error?) -> ())
 }

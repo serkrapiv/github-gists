@@ -10,12 +10,12 @@ import UIKit
 
 extension DetailGistViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return commits.count
+        return presenter.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Commit Cell", for: indexPath) as! CommitTableViewCell
-        let commit = commits[indexPath.row]
+        let commit = presenter.getNeededCommit(by: indexPath.row)
         cell.additionsLabel.text = "+" + String(commit.status.additions ?? Int())
         cell.deletionsLabel.text = "-" + String(commit.status.deletions ?? Int())
         cell.dateLabel.text = commit.committedAt ?? String()

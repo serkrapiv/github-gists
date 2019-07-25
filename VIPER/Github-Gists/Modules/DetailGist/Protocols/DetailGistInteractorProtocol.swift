@@ -10,4 +10,8 @@ import Foundation
 
 protocol DetailGistInteractorProtocol: class {
     
+    var commits: [Commit] { get set }
+    
+    func downloadCommits(for gist: Gist)
+    
 }
