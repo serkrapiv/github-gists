@@ -10,6 +10,12 @@ import Foundation
 
 class GistsConfigurator: GistsConfiguratorProtocol {
     func configure(with viewController: GistsViewController) {
+        let presenter = GistsPresenter(view: viewController)
+        let interactor = GistsInteractor(presenter: presenter)
+        let router = GistsRouter(viewController: viewController)
         
+        viewController.presenter = presenter
+        presenter.interactor = interactor
+        presenter.router = router
     }
 }

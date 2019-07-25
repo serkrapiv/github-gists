@@ -10,13 +10,13 @@ import UIKit
 
 extension GistsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return topGistMakers.count
+        return presenter.topGistMakersCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Avatar Cell", for: indexPath) as! AvatarCollectionViewCell
         
-        let owner = topGistMakers[indexPath.row]
+        let owner = presenter.getNeededOwner(by: indexPath.row)
         if let avatarUrlString = owner?.avatarURL {
             cell.avatarImageView.downloadImageIfNeeded(from: avatarUrlString)
         }

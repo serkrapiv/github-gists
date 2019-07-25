@@ -10,8 +10,7 @@ import UIKit
 
 extension GistsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let chosenOwner = topGistMakers[indexPath.row]
-        sortedGists = gists.filter { $0.owner == chosenOwner }
+        presenter.sortGistsByOwner(with: indexPath.row)
         lastPublicGistTableView.reloadData()
     }
 }

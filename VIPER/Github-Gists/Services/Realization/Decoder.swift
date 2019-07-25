@@ -8,9 +8,9 @@
 
 import Foundation
 
-class GGDecoder {
+class GGDecoder: DecoderProtocol {
     
-    static func decode(_ decoderHandler: @escaping () throws -> ()) {
+    func decode(_ decoderHandler: @escaping () throws -> ()) {
         do {
             try decoderHandler()
         }

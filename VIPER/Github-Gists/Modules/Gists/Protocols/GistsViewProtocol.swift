@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol GistsViewProtocol: class {
+    
+    func enableControls()
+    
+}

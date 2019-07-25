@@ -15,6 +15,9 @@ class DetailGistViewController: UIViewController {
     var gist: Gist!
     lazy var commits = [Commit]()
     
+    let serializationService: SerializatorProtocol = Serializator()
+    let decodingService: DecoderProtocol = GGDecoder()
+    
     
     // MARK: - Outlets
 
@@ -73,11 +76,11 @@ class DetailGistViewController: UIViewController {
         
         guard let data = data, let _ = response else { return }
         
-        Serializator.pull(data: data) { (json) in
+        serializationService.pull(data: data) { (json) in
             print(json)
         }
         
-        GGDecoder.decode {
+        decodingService.decode {
             self.commits = try JSONDecoder().decode(Array<Commit>.self, from: data)
         }
         updateCommitsTableView()

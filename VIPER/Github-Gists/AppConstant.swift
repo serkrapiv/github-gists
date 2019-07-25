@@ -13,4 +13,8 @@ class AppConstant {
     struct segues {
         static let toDetaiedView = "toDetailedGistView"
     }
+    
+    struct api {
+        static let gists = "https://api.github.com/gists/public"
+    }
 }

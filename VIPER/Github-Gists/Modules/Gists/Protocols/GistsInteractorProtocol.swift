@@ -10,4 +10,11 @@ import Foundation
 
 protocol GistsInteractorProtocol: class {
     
+    var gists: [Gist] { get set }
+    var sortedGists: [Gist] { get set }
+    var topGistMakers: [Owner?] { get set }
+    
+    func requestPublicGists()
+    func sortGistsByOwner(with index: Int)
+    
 }

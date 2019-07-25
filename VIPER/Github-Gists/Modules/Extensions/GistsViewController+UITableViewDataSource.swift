@@ -10,12 +10,11 @@ import UIKit
 
 extension GistsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard sortedGists.isEmpty else { return sortedGists.count }
-        return gists.count
+        return presenter.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let gist = sortedGists.isEmpty ? gists[indexPath.row] : sortedGists[indexPath.row]
+        let gist = presenter.getNeededGist(by: indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Gist Cell", for: indexPath) as! GistTableViewCell
         cell.authorNameLabel.text = gist.owner.login
         cell.gistNameLabel.text = gist.description

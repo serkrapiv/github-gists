@@ -6,8 +6,11 @@
 //  Copyright © 2019 VictorVolnukhin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol GistsRouterProtocol: class {
+    
+    func performSegue(withIdentifier identifier: String, sender: Gist)
+    func prepare(for segue: UIStoryboardSegue, sender: Any?)
     
 }

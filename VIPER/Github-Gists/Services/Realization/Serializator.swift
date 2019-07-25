@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Serializator {
+class Serializator: SerializatorProtocol {
     
-    static func pull(data: Data, _ serializationHandler: (Any) throws -> ()) {
+    func pull(data: Data, _ serializationHandler: (Any) throws -> ()) {
         print("[...] Try to serialize json...")
         do {
             let json = try JSONSerialization.jsonObject(with: data, options: [])
