@@ -43,6 +43,8 @@
 		A712547D22E9D10900339618 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712547C22E9D10900339618 /* NetworkProtocol.swift */; };
 		A712547F22E9D21200339618 /* SerializatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712547E22E9D21200339618 /* SerializatorProtocol.swift */; };
 		A712548122E9D24F00339618 /* DecoderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712548022E9D24F00339618 /* DecoderProtocol.swift */; };
+		A712548322E9F2A200339618 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712548222E9F2A200339618 /* Cache.swift */; };
+		A712548522E9F47900339618 /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712548422E9F47900339618 /* CacheProtocol.swift */; };
 		A729AD8722E73B1D00C1827D /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8622E73B1D00C1827D /* Commit.swift */; };
 		A729AD8922E73BFD00C1827D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8822E73BFD00C1827D /* Status.swift */; };
 		A729AD8B22E7411800C1827D /* CommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */; };
@@ -94,6 +96,8 @@
 		A712547C22E9D10900339618 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		A712547E22E9D21200339618 /* SerializatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializatorProtocol.swift; sourceTree = "<group>"; };
 		A712548022E9D24F00339618 /* DecoderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderProtocol.swift; sourceTree = "<group>"; };
+		A712548222E9F2A200339618 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		A712548422E9F47900339618 /* CacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
 		A729AD8622E73B1D00C1827D /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		A729AD8822E73BFD00C1827D /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		A729AD8A22E7411800C1827D /* CommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewCell.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				24568A3822E4857E0061EE97 /* Network.swift */,
 				A7820EF822E708F70068C6E9 /* Serializator.swift */,
 				A7799E5122E5CC3D008F4501 /* Decoder.swift */,
+				A712548222E9F2A200339618 /* Cache.swift */,
 			);
 			path = Realization;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				A712547C22E9D10900339618 /* NetworkProtocol.swift */,
 				A712547E22E9D21200339618 /* SerializatorProtocol.swift */,
 				A712548022E9D24F00339618 /* DecoderProtocol.swift */,
+				A712548422E9F47900339618 /* CacheProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 				A712547D22E9D10900339618 /* NetworkProtocol.swift in Sources */,
 				A7820EF222E6FB020068C6E9 /* GistsViewController+UITableViewDelegate.swift in Sources */,
 				24568A3E22E493E00061EE97 /* GistsViewController+UICollectionViewDataSource.swift in Sources */,
+				A712548522E9F47900339618 /* CacheProtocol.swift in Sources */,
 				240D182722E3668700D1A5FD /* Gist.swift in Sources */,
 				A7820EF922E708F70068C6E9 /* Serializator.swift in Sources */,
 				A779DE6822E7328C0036CE6F /* ContentTextView.swift in Sources */,
@@ -404,6 +411,7 @@
 				A712545D22E99AE900339618 /* GistsConfigurator.swift in Sources */,
 				A729AD8722E73B1D00C1827D /* Commit.swift in Sources */,
 				A729AD8B22E7411800C1827D /* CommitTableViewCell.swift in Sources */,
+				A712548322E9F2A200339618 /* Cache.swift in Sources */,
 				240D182222E3484F00D1A5FD /* DetailGistViewController.swift in Sources */,
 				24568A3922E4857E0061EE97 /* Network.swift in Sources */,
 				A712546922E99CA700339618 /* GistsInteractor.swift in Sources */,

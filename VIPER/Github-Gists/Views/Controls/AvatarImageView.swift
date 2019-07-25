@@ -16,6 +16,7 @@ class AvatarImageView: UIImageView {
     
     var imageURLString: String?
     var networkService: NetworkServiceProtocol!
+    var cacheService: CacheServiceProtocol = Cache()
     
     
     // MARK: - Methods
@@ -28,19 +29,14 @@ class AvatarImageView: UIImageView {
         // Clean before loading
         image = nil
         
-        if !(loadImageFromCache(with: urlString)) {
+        if let data = cacheService.load(by: urlString) {
+            image = UIImage(data: data)
+        } else {
             downloadImage(from: urlString)
         }
     }
     
-    /// If image was found in cache, return true
-    private func loadImageFromCache(with urlString: String) -> Bool {
-        guard let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage else { return false }
-        
-        self.image = imageFromCache
-        print("Image load from cache")
-        return true
-    }
+    
     
     /// Download image from server
     private func downloadImage(from urlString: String) {
@@ -58,22 +54,19 @@ class AvatarImageView: UIImageView {
         }
         
         guard let data = data, let response = response else { return }
-        let urlString = response.url?.absoluteString
+        guard let urlString = response.url?.absoluteString else { return }
         
         DispatchQueue.main.async {
-            self.saveImageInCache(with: urlString, and: data)
+            let imageToCache = UIImage(data: data)
+            
+            if self.imageURLString == urlString {
+                self.image = imageToCache
+            }
+            
+            self.cacheService.save(with: urlString, and: data)
         }
     }
     
-    private func saveImageInCache(with urlString: String?, and data: Data) {
-        print("Image download from server")
-        let imageToCache = UIImage(data: data)
-        
-        if self.imageURLString == urlString {
-            self.image = imageToCache
-        }
-        
-        imageCache.setObject(imageToCache!, forKey: urlString as AnyObject)
-    }
+    
     
 }
